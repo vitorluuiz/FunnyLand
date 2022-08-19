@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #f3f3f3;
+    --firstPlan: #737373;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    background-color: var(--firstPlan);
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.centralize {
+    justify-content: center;
+}
+
+.align{
+    align-items: center;
+}
