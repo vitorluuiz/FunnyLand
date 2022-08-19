@@ -12,10 +12,10 @@ export default function Home() {
     function SearchClan(event) {
         event.preventDefault();
 
-        axios('https://api.clashofclans.com/v1/clans/%232Q2JU2JJY/members', {
+        axios('https://api.clashofclans.com/v1/clans/'+Tagclan+'/members', {
             headers: {
                 'Accept': 'application/json',
-                'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImQ0MTU3OGVjLTc1MDktNDU3ZC04YWFkLTgwMTA4NGQxODM4ZSIsImlhdCI6MTY2MDg2NjY5MCwic3ViIjoiZGV2ZWxvcGVyL2E2M2I1MDRkLWFhZDEtYTY0Mi0wMmMyLTU4YTA0YjIwZDJlNCIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjU0Ljg2LjUwLjEzOSIsIjE5MS4xODAuMTY3LjE4Il0sInR5cGUiOiJjbGllbnQifV19.PY5fo2UxeQxHmnbR3JxlHKr454eCRTKXUehhRv9sG39UuMdCOB0fwacmKIXaBGdrPSnJnVbeqzPit5wiBPC-SA'
+                'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6ImQ0MTU3OGVjLTc1MDktNDU3ZC04YWFkLTgwMTA4NGQxODM4ZSIsImlhdCI6MTY2MDg2NjY5MCwic3ViIjoiZGV2ZWxvcGVyL2E2M2I1MDRkLWFhZDEtYTY0Mi0wMmMyLTU4YTA0YjIwZDJlNCIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjU0Ljg2LjUwLjEzOSIsIjE5MS4xODAuMTY3LjE4Il0sInR5cGUiOiJjbGllbnQifV19.PY5fo2UxeQxHmnbR3JxlHKr454eCRTKXUehhRv9sG39UuMdCOB0fwacmKIXaBGdrPSnJnVbeqzPit5wiBPC-SA'
             }
         })
             .then(response => {
