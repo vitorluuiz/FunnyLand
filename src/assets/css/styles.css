@@ -1,12 +1,36 @@
+@font-face {
+    font-family: 'pridiBold';
+    src: url('../font/Pridi/Pridi-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'pridiSemi';
+    src: url('../font/Pridi/Pridi-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'pridiLight';
+    src: url('../font/Pridi/Pridi-Light.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+*::selection {
+    background-color: var(--fontTitle);
+    color: var(--firstPlan);
+}
+
 :root {
-    --background: #f3f3f3;
-    --firstPlan: #737373;
+    --firstPlan: #F3F3F3;
+    --secondPlan: #E39C38;
+    --background: #C98A32;
+    --fontTitle: #634419;
+    /* --fontTitle: #whitesmoke; */
+    --text: whitesmoke;
 }
 
 body {
@@ -16,15 +40,15 @@ body {
 .container {
     width: 85%;
     margin: 0 auto;
-    background-color: var(--firstPlan);
+    background-color: var(--secondPlan);
 }
 
-.row{
+.row {
     display: flex;
     flex-direction: row;
 }
 
-.column{
+.column {
     display: flex;
     flex-direction: column;
 }
@@ -33,6 +57,25 @@ body {
     justify-content: center;
 }
 
-.align{
+.align {
     align-items: center;
+}
+
+.press_btn:hover {
+    transition: ease-out 150ms all;
+    border: 3px solid #634419;
+    width: 100%;
+    box-shadow: 0 5px var(--fontTitle);
+    background-color: var(--firstPlan);
+}
+
+.press_btn:not(:hover){
+    transition: ease-out 100ms all;
+    border: 0px solid #634419;
+    width: 70%;
+}
+
+.press_btn:active{
+    transition: ease-out 100ms all;
+    transform: scale(0.95);
 }
