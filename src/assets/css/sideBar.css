@@ -1,0 +1,81 @@
+.side_bar_background {
+    transition: all 200ms;
+    width: 20vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.side_bar_suport {
+    width: 90%;
+    height: 80%;
+    align-items: center;
+}
+
+.side_bar_item, .side_bar_item__current {
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-family: 'pridiSemi';
+    text-decoration: unset;
+    color: var(--text);
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+}
+
+.side_bar_item:hover {
+    transition: all 100ms;
+    color: var(--fontTitle);
+}
+
+.side_bar_item__current {
+    color: var(--fontTitle);
+    border: 3px solid #634419;
+    width: 100%;
+    box-shadow: 0 5px var(--fontTitle);
+    background-color: var(--firstPlan);
+}
+
+.side_bar_switch_suport {
+    width: 50%;
+}
+
+.side_bar_switch {
+    font-size: 1.4em;
+    font-family: 'pridiLight';
+    color: var(--text);
+    width: 25%;
+    min-height: 40px;
+    border-radius: var(--radius);
+}
+
+.side_bar_switch:hover {
+    transition: all 100ms;
+    color: var(--fontTitle);
+}
+
+.closed_side_bar {
+    width: 3vw;
+    height: 100vh;
+}
+
+.closed_side_bar {
+    width: 4.5vw;
+    height: 100vh;
+}
+
+.closed_side_bar:active{
+    background-color: var(--background);
+}
+
+.closed_side_bar:hover {
+    transition: all 100ms;
+    background-color: var(--text);
+}
+
+.closed_side_bar:not(:hover){
+    transition: all 100ms;
+    background-color: var(--background);
+}

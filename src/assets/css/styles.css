@@ -31,10 +31,24 @@
     --fontTitle: #634419;
     /* --fontTitle: #whitesmoke; */
     --text: whitesmoke;
+    --radius: 10px;
 }
 
 body {
     background-color: var(--background);
+}
+
+main {
+    height: 100vh;
+    width: 80%;
+    position: absolute;
+    right: 0;
+    background-color: var(--secondPlan);
+}
+
+main.full {
+    transition: all 150ms;
+    width: 95.5vw;
 }
 
 .container {
@@ -69,13 +83,13 @@ body {
     background-color: var(--firstPlan);
 }
 
-.press_btn:not(:hover){
+.press_btn:not(:hover) {
     transition: ease-out 100ms all;
     border: 0px solid #634419;
-    width: 70%;
+    width: 80%;
 }
 
-.press_btn:active{
-    transition: ease-out 100ms all;
+.press_btn:active {
+    transition: ease-out 150ms all;
     transform: scale(0.95);
 }
