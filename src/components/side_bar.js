@@ -46,6 +46,7 @@ export default function SideBar({ parentToChild }) {
                     <section className='column side_bar_suport'>
                         <Link to='/' onClick={SetCurrentScreen} id="1" className='side_bar_item press_btn'>Home</Link>
                         <Link to='/Cassino' onClick={SetCurrentScreen} id="2" className='side_bar_item press_btn'>Cassino</Link>
+                        <Link to='/Temas' onClick={SetCurrentScreen} id="3" className='side_bar_item press_btn'>Temas</Link>
                     </section>
 
                     <section className='column align side_bar_switch_suport'>
