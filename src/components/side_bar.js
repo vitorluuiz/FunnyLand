@@ -6,12 +6,12 @@ import OpenIcon from '../assets/img/ExpandIcon.svg'
 import '../assets/css/styles.css'
 import '../assets/css/sideBar.css'
 
-export default function SideBar() {
+export default function SideBar({ parentToChild }) {
 
     const [isClosed, setClosed] = useState(false);
 
     function SearchCurrentScreen() {
-        let CurrentItem = document.getElementById(localStorage.getItem('clashWar-CurrentScreen')).classList;
+        var CurrentItem = document.getElementById(parentToChild).classList;
         CurrentItem.add('side_bar_item__current');
         CurrentItem.remove('press_btn', 'side_bar_item');
     }
@@ -47,12 +47,13 @@ export default function SideBar() {
                         <Link to='/' onClick={SetCurrentScreen} id="1" className='side_bar_item press_btn'>Home</Link>
                         <Link to='/Cassino' onClick={SetCurrentScreen} id="2" className='side_bar_item press_btn'>Cassino</Link>
                     </section>
+
                     <section className='column align side_bar_switch_suport'>
-                        <div onClick={CloseSideBar} className='side_bar_switch press_btn column centralize align'>Fechar aba</div>
+                        <button onClick={CloseSideBar} className='side_bar_switch press_btn column centralize align'>Fechar aba</button>
                     </section>
                 </aside>
                 :
-                <aside onClick={OpenSideBar} className='closed_side_bar column centralize align'><img src={OpenIcon}/></aside>
+                <aside onClick={OpenSideBar} className='closed_side_bar column centralize align'><img src={OpenIcon} /></aside>
             }
         </div>
     )

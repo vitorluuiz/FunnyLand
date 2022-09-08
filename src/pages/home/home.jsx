@@ -9,11 +9,10 @@ export default function Home() {
 
     const [Lista, setLista] = useState([]);
     const [Item, setItem] = useState('');
-    const [CountClick, setCountClick] = useState();
 
     return (
         <div className='row'>
-            <SideBar />
+            <SideBar parentToChild={'1'}/>
 
             <main id='main' className='column align centralize'>
                 <h1>ClashWar</h1>

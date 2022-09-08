@@ -13,7 +13,7 @@ export default function Cassino() {
 
     return (
         <div className='row'>
-            <SideBar />
+            <SideBar parentToChild={'2'}/>
 
             <main id='main' className='column align centralize'>
                 <h1 id='cassino'>Cassino</h1>

@@ -25,11 +25,18 @@
 }
 
 :root {
-    --firstPlan: #F3F3F3;
+    /* Original */
+    /* --firstPlan: #F3F3F3;
     --secondPlan: #E39C38;
     --background: #C98A32;
     --fontTitle: #634419;
-    /* --fontTitle: #whitesmoke; */
+    --text: whitesmoke; */
+
+
+    --firstPlan: #F3F3F3;
+    --secondPlan: #F26835;
+    --background: #D95D30;
+    --fontTitle: #733119;
     --text: whitesmoke;
     --radius: 10px;
 }

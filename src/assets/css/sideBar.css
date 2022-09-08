@@ -46,6 +46,7 @@
     font-size: 1.4em;
     font-family: 'pridiLight';
     color: var(--text);
+    background-color: var(--background);
     width: 25%;
     min-height: 40px;
     border-radius: var(--radius);
