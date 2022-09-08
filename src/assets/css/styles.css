@@ -49,18 +49,14 @@
     --firstPlan: #F3F3F3;
     --secondPlan: #F26835;
     --background: #D95D30;
-    --fontTitle: #733119;
-    
+    --fontTitle: #733119;    
 }
 
-.standard:root {
+:root {
     --firstPlan: #F3F3F3;
     --secondPlan: #E39C38;
     --background: #C98A32;
     --fontTitle: #634419;
-}
-
-:root{
     --text: whitesmoke;
     --radius: 10px;
 }
@@ -109,6 +105,7 @@ main.full {
 .press_btn:hover {
     transition: ease-out 150ms all;
     border: 3px solid #634419;
+    color: var(--fontTitle);
     width: 100%;
     box-shadow: 0 5px var(--fontTitle);
     background-color: var(--firstPlan);

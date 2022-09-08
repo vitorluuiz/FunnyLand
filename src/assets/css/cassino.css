@@ -1,8 +1,4 @@
-h1#cassino{
-    top: 1vh;
-    font-size: 5em;
-}
-
-.block_home_suport#cassino{
-    background-color: aqua;
+.cassino_suport_background{
+    width: 78vw;
+    height: 90vh;
 }

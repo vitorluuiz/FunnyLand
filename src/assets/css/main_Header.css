@@ -1,0 +1,17 @@
+.main_header_suport{
+    width: 78vw;
+}
+
+.main_header_item{
+    padding: 8px 7px;
+    margin: 0 auto;
+    max-width: max-content;
+    font-size: 1.4em;
+    font-family: 'pridiSemi';
+    color: var(--text);
+    border-radius: var(--radius);
+}
+
+.main_header_item:not(:hover){
+    background-color: var(--secondPlan);
+}
