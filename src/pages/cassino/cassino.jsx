@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { render } from 'react-dom';
 import SideBar from '../../components/side_bar.js'
 import MainHeader from '../../components/main_Header';
+import CassinoContent from '../../components/cassino_content';
 
 export default function Cassino() {
 
@@ -13,12 +14,13 @@ export default function Cassino() {
 
     return (
         <div className='row'>
-            <SideBar parentToChild={'2'} />
+            <SideBar screen={'side2'} />
 
-            <main id='main' className='column align centralize'>
+            <main className='column align centralize'>
                 <div id='cassino' className='cassino_suport_background column'>
                     <MainHeader />
 
+                    <CassinoContent />
                 </div>
             </main>
         </div>

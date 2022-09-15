@@ -6,47 +6,69 @@ import OpenIcon from '../assets/img/ExpandIcon.svg'
 import '../assets/css/styles.css'
 import '../assets/css/sideBar.css'
 
-export default function SideBar({ parentToChild }) {
+export default function SideBar({ screen }) {
+    // O parâmetro screen é acessado da classe pai, para trazer a informação de qual tela está sendo mostrada
 
+    const sideBar = document.getElementById('sideBar');
+
+    // Variável para controlar o fechamento da barra lateral
     const [isClosed, setClosed] = useState(false);
+    const [isListener, setEvent] = useState(false);
 
-    function SearchCurrentScreen() {
-        var CurrentItem = document.getElementById(parentToChild).classList;
-        CurrentItem.add('side_bar_item__current');
-        CurrentItem.remove('press_btn', 'side_bar_item');
+    // Função para definir o inicio do sistema
+    function SearchCurrentSettings() {
+        // Cria uma váriavel para representar a selecão da side bar com o Id indicado
+        var currentItem = document.getElementById(screen).classList;
+        // Adiciona a classe que corresponde a um item selecionado
+        currentItem.add('side_bar_item__current');
+        // Exclui as ckasses que correspondem a um item não selecionado
+        currentItem.remove('press_btn', 'side_bar_item');
+
+        // Seleciona o elemento Html
+        let page = document.querySelector('html')
+        // Busca no armazenamento local a cor selecionada no dispositivo
+        let appliedColor = localStorage.getItem('clashWar-ColorTheme');
+        // Caso seja em encontrada uma cor
+        if (appliedColor != null) {
+            // Adiciona a classe já definida no Armazenamento local
+            page.classList.add(appliedColor);
+        }
+        // Caso não seja encontrada uma cor, é aplicado um tema padrão inicial
+        else {
+            page.classList.add('standard');
+        }
     }
 
-    function SetCurrentScreen(item) {
-        localStorage.setItem('clashWar-CurrentScreen', item.target.id)
-    }
-
+    // Função para fechar a barra lateral
     function CloseSideBar() {
+          // Altera o state para definir que a barra lateral está fechada
         setClosed(true);
-        document.getElementById('main').classList.add('full');
+        // Adiciona uma classe para a main definindo que a mesma foi ampliada
+        document.querySelector('main').classList.add('full');  
     }
 
+    // Função para abrir a barra lateral
     function OpenSideBar() {
-        document.getElementById('main').classList.remove('full');
+        // Removendo a classe 'full' definindo que a main está em seu tamanho padrão
+        document.querySelector('main').classList.remove('full');
+        // Altera o state para definir que a barra lateral foi fechada
         setClosed(false);
 
-        setInterval(function SearchCurrentScreen() {
-            let CurrentItem = document.getElementById(localStorage.getItem('clashWar-CurrentScreen')).classList;
-            CurrentItem.add('side_bar_item__current');
-            CurrentItem.remove('press_btn', 'side_bar_item');
-        }, 50)
+        // Invoca a função 'SearchCurrentSettings' para atualizar o sistema da barra lateral
+        setTimeout(SearchCurrentSettings, 50);
     }
 
-    useEffect(SearchCurrentScreen, [])
+    
+    useEffect(SearchCurrentSettings, [])
 
     return (
         <div>
             {isClosed === false ?
-
-                <aside className='column side_bar_background'>
+                <aside id='sideBar' className='column side_bar_background'>
                     <section className='column side_bar_suport'>
-                        <Link to='/' onClick={SetCurrentScreen} id="1" className='side_bar_item press_btn'>Home</Link>
-                        <Link to='/Cassino' onClick={SetCurrentScreen} id="2" className='side_bar_item press_btn'>Cassino</Link>
-                        <Link to='/Temas' onClick={SetCurrentScreen} id="3" className='side_bar_item press_btn'>Temas</Link>
+                        <Link to='/' id="side1" className='side_bar_item press_btn'>Home</Link>
+                        <Link to='/Cassino' id="side2" className='side_bar_item press_btn'>Cassino</Link>
+                        <Link to='/Temas' id="side3" className='side_bar_item press_btn'>Temas</Link>
                     </section>
 
                     <section className='column align side_bar_switch_suport'>
@@ -56,7 +78,7 @@ export default function SideBar({ parentToChild }) {
                 :
                 <aside onClick={OpenSideBar} className='closed_side_bar column centralize align'><img src={OpenIcon} /></aside>
             }
-        </div>
+        </div >
     )
 }
 

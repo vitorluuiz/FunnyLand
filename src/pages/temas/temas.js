@@ -19,7 +19,7 @@ export default function Temas() {
 
     return (
         <div className="row">
-            <SideBar parentToChild={'3'} />
+            <SideBar screen={'side3'} />
 
             <main id="main" className="column centralize align temas_background">
                 <section className="row centralize temas_colors_suport">

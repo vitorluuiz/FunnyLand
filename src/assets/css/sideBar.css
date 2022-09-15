@@ -74,7 +74,7 @@
 
 .closed_side_bar:hover {
     transition: all 100ms;
-    background-color: var(--text);
+    background-color: var(--fontTitle);
 }
 
 .closed_side_bar:not(:hover){
