@@ -29,11 +29,6 @@ export default function CassinoContent() {
         setOption(item.target.id);
     }
 
-    function UpdateMoney(currentMoney, currentBet, multi) {
-        currentMoney = currentMoney + currentBet * multi;
-        return currentMoney;
-    }
-
     function SortResult() {
         let result = Math.random();
         let resultScreen = document.getElementById('result_screen').classList;
@@ -58,6 +53,7 @@ export default function CassinoContent() {
     }
 
     useEffect(SearchSettings, [CurrentBet]);
+    useEffect(SearchSettings, []);
 
     return (
         <div className="row cassino_content_background">
