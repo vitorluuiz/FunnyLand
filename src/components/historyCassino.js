@@ -10,7 +10,7 @@ export default function HistorySection({ currentResult, update }) {
 
     function SortLastTen() {
         if (!isSort) {
-            for (let i = 1; i <= 31; i++) {
+            for (let i = 1; i <= 21; i++) {
                 let result = Math.random();
                 let itemList;
                 if (result > 0.51) {

@@ -1,3 +1,5 @@
+/* Grid */
+
 .cassino_suport_background {
     width: 78vw;
     height: 96vh;
@@ -6,150 +8,79 @@
 
 .cassino_content_background {
     height: 91%;
-    background-color: var(--background);
-    border-radius: var(--radius);
-}
-
-.content_game {
-    width: 80%;
-}
-
-.draw_game {
-    width: 100%;
-    height: 85%;
-}
-
-.header_double {
-    width: 100%;
-    height: 12%;
-    justify-content: space-around;
-    background-color: var(--doubleFirstPlan);
-}
-
-.header_double span {
-    font-family: 'pridiLight';
-    font-size: 1.2em;
-    color: var(--text);
-}
-
-.draw_game_sort_suport {
-    width: 100%;
-    height: 88%;
-    background-color: var(--doubleBackground);
-}
-
-.sort_time {
-    width: 95%;
-    padding: 10px 0;
-    background-color: aliceblue;
-}
-
-.sort_roulette {
-    width: 95%;
-    height: 45%;
-    background-color: white;
-}
-
-.select_double {
-    width: 100%;
-    height: 15%;
-    background-color: var(--doubleFirstPlan);
-}
-
-.input_bet_background {
-    width: 50%;
-    height: 100%;
-}
-
-.input_bet_suport {
-    width: 90%;
-    height: 60%;
+    display: flex;
     justify-content: space-between;
 }
 
-.input_bet_suport input {
-    width: 65%;
+/* Content */
+
+.suport_cassino_content {
+    width: 60%;
     height: 80%;
-    padding-left: 10px;
-    border: none;
-    border-bottom: 4px solid black;
-}
-
-.input_bet_suport input, .input_bet_suport input::placeholder, .input_bet_suport button {
-    font-family: 'pridiLight';
-    font-size: 1.1em;
-    color: var(--text) !important;
-    background-color: var(--doubleBackground);
-}
-
-.input_bet_suport div {
-    width: 30%;
-    height: 80%;
-}
-
-.input_bet_suport div button {
-    width: 100% !important;
-    height: 100%;
-    color: var(--fontTitle);
-}
-
-.cassino_input_bet {
-    width: 50%;
-}
-
-.suport_options {
-    width: 50%;
-    height: 100%;
-}
-
-.bet_btn {
-    width: 33%;
-}
-
-.bet_btn .press_btn:hover, .input_bet_suport div button:hover{
-    border-color: black;
-    box-shadow: 0 2px black;
-}
-
-.bet_btn button {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 10px 10px;
+    margin: auto auto;
     border-radius: var(--radius);
-    color: var(--text);
-    font-size: 1.3em;
-    font-family: 'pridiLight';
+    background-color: var(--background);
+    box-shadow: 0 4px 7px -2px var(--fontTitle);
 }
 
-.bet_btn button:hover {
-    color: var(--text);
-    width: 100%;
+.header_double {
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    background-color: antiquewhite;
+    position: top;
 }
 
-.red, .red:hover {
-    background-color: #A8200B;
+.double_option_suport {
+    width: 80%;
+    height: 60%;
+    margin: auto auto;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.black, .black:hover {
+.double_option {
+    max-width: 200px;
+    height: 200px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.double_option#black{
+    color: white;
     background-color: black;
 }
 
-.green, .green:hover {
-    background-color: #013D1B;
+.double_option#red{
+    color: white;
+    background-color: red;
 }
+
+/* History */
 
 .cassino_history_background {
     background-color: var(--historyBackground);
     border-radius: var(--radius);
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
-    width: 30%;
-    height: 100%;
+    width: 15%;
+    height: 80%;
+    margin: auto 0;
 }
-.item_list_history{
+
+.item_list_history {
     width: 100%;
-    height: 3.333333%;
+    height: 5%;
     border: 1px solid white;
+}
+
+.red {
+    background-color: red;
+}
+
+.black {
+    background-color: black;
+}
+
+.green {
+    background-color: green;
 }

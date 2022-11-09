@@ -26,7 +26,7 @@ export default function Home() {
             <SideBar screen={'side1'} />
 
             <main id='main' className='column align centralize'>
-                <h1>ClashWar</h1>
+                <h1>FunnyLand</h1>
                 <div className='block_home_suport column centralize align'>
                     <form className='column align'>
                         <div className='input_suport__div column'>

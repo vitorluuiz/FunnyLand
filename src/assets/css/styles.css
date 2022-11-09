@@ -57,8 +57,6 @@
     --secondPlan: #E39C38;
     --background: #C98A32;
     --fontTitle: #634419;
-    --doubleFirstPlan: #333333;
-    --doubleBackground: #023373;
     --historyBackground: #F3F3F3;
     --text: whitesmoke;
     --radius: 10px;
@@ -111,7 +109,8 @@ main.full {
     border: 3px solid var(--fontTitle);
     color: var(--fontTitle);
     width: 100%;
-    box-shadow: 0 5px var(--fontTitle);
+    box-shadow: 0 3px 5px -1px var(--fontTitle);
+    /* box-shadow: 0px 5px var(--fontTitle); */
     background-color: var(--firstPlan);
 }
 
